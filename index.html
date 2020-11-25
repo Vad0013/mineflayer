@@ -2,16 +2,10 @@
 <script type="text/javascript">
 const mineflayer = require('mineflayer')
 
-if (process.argv.length < 4 || process.argv.length > 6) {
-  console.log('Usage : node jumper.js <host> <port> [<name>] [<password>]')
-  process.exit(1)
-}
-
 const bot = mineflayer.createBot({
-  host: process.argv[2],
-  port: parseInt(process.argv[3]),
-  username: process.argv[4] ? process.argv[4] : 'jumper',
-  password: process.argv[5]
+  host: 'MirrorAzure.aternos.me', // optional
+  port: 25565,       // optional
+  username: 'Bot'
 })
 
 let target = null
